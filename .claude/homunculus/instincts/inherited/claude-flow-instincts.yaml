@@ -1,0 +1,323 @@
+# Instincts generated from https://github.com/4xiaxia/claude-flow
+# Generated: 2026-07-08T00:07:12.290Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: claude-flow-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Commit Length
+
+## Action
+
+Write moderate-length commit messages (~65 characters)
+
+## Evidence
+
+- Average commit message length: 65 chars
+- Based on 1 commits
+
+---
+id: claude-flow-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: claude-flow-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: claude-flow-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: claude-flow-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: claude-flow-workflow-dependency-update-across-monorepo
+trigger: "when doing dependency update across monorepo"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/4xiaxia/claude-flow
+---
+
+# Claude Flow Workflow Dependency Update Across Monorepo
+
+## Action
+
+Follow the dependency-update-across-monorepo workflow:
+1. Identify outdated dependencies in multiple package.json files.
+2. Update the version(s) of the dependency in each relevant package.json.
+3. Update corresponding lockfiles (package-lock.json, pnpm-lock.yaml) in each directory.
+4. Commit all changed package.json and lockfile(s) together with a detailed changelog in the commit message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, package-lock.json, pnpm-lock.yaml
+
+---
+id: claude-flow-instinct-naming-files
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Naming Files
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: claude-flow-instinct-naming-functions
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Naming Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: claude-flow-instinct-naming-classes
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Naming Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: claude-flow-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Naming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: claude-flow-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: claude-flow-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: claude-flow-instinct-try-catch-errors
+trigger: "When handling errors in code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style
+
+---
+id: claude-flow-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: claude-flow-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Git Commit Format
+
+## Action
+
+Write freeform commit messages without a strict prefix, with an average length of ~65 characters, and include detailed changelogs for multi-package updates
+
+## Evidence
+
+- Pattern in commits.type
+- Example: 'Bump the npm_and_yarn group across 15 directories with 10 updates'
+
+---
+id: claude-flow-instinct-dependency-update-workflow
+trigger: "When updating dependencies across multiple packages/directories in the monorepo"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: 4xiaxia/claude-flow
+---
+
+# Claude Flow Instinct Dependency Update Workflow
+
+## Action
+
+Identify outdated dependencies, update versions in each relevant package.json, update corresponding lockfiles, and commit all changes together with a detailed changelog
+
+## Evidence
+
+- Workflow: dependency-update-across-monorepo
+- Commit sequence and example in workflows
+
